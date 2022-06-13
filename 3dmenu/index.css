@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(24, 18, 23);
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    transform: skewY(-15deg);
+    width: fit-content;
+}
+
+ul li {
+    position: relative;
+    color: #999;
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 0.25em; 
+    background-color: #494949;
+    z-index: var(--i);
+    transition: 0.5s;
+    left: 0px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    background-color: #222222;
+    top: 0px;
+    left: -1em;
+    width: 1em;
+    height: 100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+ul li:hover::before {
+    background-color: hsl(207, 89%, 15%);
+}
+
+
+ul li::after {
+    content: '';
+    background-color: #353535;
+    width: 100%;
+    height: 1em;
+    position: absolute;
+    left: 0px;
+    top: -1em;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+ul li:hover::after {
+    background-color: hsl(207, 89%, 20%);
+}
+
+
+ul li:hover {
+    color: #fff;
+    left: -1em;
+    background-color: hsl(207, 89%, 45%);
+}
+
+ul li:last-child::after {
+    box-shadow: -4em 4em 0.5em #000000a0;
+}
+
+ul li a {
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    color: inherit;
+}
