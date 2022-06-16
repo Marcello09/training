@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #484848;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    margin: 0px;
+    padding: 1em;
+    border-radius: 0.125em;
+    background-color: #fafafa;
+    height: fit-content;
+}
+
+ul li {
+    display: inline-flex;
+    justify-content: center;
+    margin-inline: 1em;
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+}
+
+ul li span {
+    position: relative;
+    transition: 0.5s;
+}
+
+ul li.selected span {
+    display: block;
+    transform: translateY(-1.25em);
+}
+
+ul li.selected .label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+}
+
+ul li .label {
+    transition: 0.5s;
+    position: absolute;
+    display: block;
+    font-size: 0.75em;
+    color: #484848;
+    text-align: center;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+}
+
+.marker {
+    position: absolute;
+    top: -50%;
+    width: 2em;
+    height: 2em;
+    background-color: hsl(120, 100%, 47%);
+    padding: 0.5em;
+    border-radius: 50%;
+    border-width: 0.25em;
+    border-style: solid;
+    border-color: #484848;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.marker::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 54%;
+    right: calc(96% + 0.25em);
+    background-color: #fafafa;
+    border-radius: 0px 10px 0px 0px;
+    box-shadow: 2px -2px 0px 0px #484848;
+
+}
+
+.marker::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 54%;
+    left: calc(96% + 0.25em);
+    background-color: #fafafa;
+    border-radius: 10px 0px 0px 0px;
+    box-shadow: -2px -2px 0px 0px #484848;
+}
+
+
+ul li:nth-child(1).selected ~ .marker {
+    transform: translateX(calc(60px * 0));
+}
+ul li:nth-child(2).selected ~ .marker {
+    transform: translateX(calc(60px * 1));
+}
+ul li:nth-child(3).selected ~ .marker {
+    transform: translateX(calc(60px * 2));
+}
+ul li:nth-child(4).selected ~ .marker {
+    transform: translateX(calc(60px * 3));
+}
+ul li:nth-child(5).selected ~ .marker {
+    transform: translateX(calc(60px * 4));
+}
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+
