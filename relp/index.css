@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 28
+}
+
+/* Startup */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    scroll-behavior: smooth;
+    background: linear-gradient(167.99deg, #783222 0%, #4F1C11 100%);
+}
+
+/* Healpers */
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Navbar */
+nav {
+    color: #f5f5f5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.5rem;
+
+    padding: 0.5em 1em;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    gap: 1em;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+
+/* Collapse Menu */
+.collapse .collapse-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: sticky;
+    }
+
+    .collapse .collapse-btn {
+        display: block;
+    }
+    .collapse .collapse-content {
+        display: none;
+    }
+
+    .collapse.show .collapse-content {
+        display: block !important;
+    }
+
+    .collapse.show {
+        position: absolute;
+        z-index: 20;
+        top: 0px;
+        right: 0px;
+        width: fit-content;
+        height: 100vh;
+        
+        background-color: #f5f5f536;
+        backdrop-filter: blur(4px);
+        text-align: end;
+        padding: 1em;
+    }
+
+
+}
+
+/* Site Content */
+section {
+    width: 100%;
+    padding-top: 3em !important;
+}
+
+/* Header */
+.header {
+    height: 100vh;
+    background: linear-gradient(167.99deg, #783222 0%, #4F1C11 100%);
+    padding: 2em;
+    color: #f5f5f5;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    width: 70%;
+    margin-bottom: 0.75em;
+}
+
+.header h2 {
+    font-size: 0.75em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
+
+    text-transform: uppercase;
+}
+
+.header .btn {
+    background-color: #f5f5f5;
+    color: #503028;
+
+    height: 2.5em;
+    line-height: 2.5em;
+    padding: 0 1em;
+    border-radius: 2.5em;
+    width: fit-content;
+    
+    font-weight: bold;
+}
+
+.header .fill {
+    flex-grow: 1;
+    position: relative;
+}
+
+.header .fill img {
+    max-width: 700px;
+    position: absolute;
+    bottom: 0px;
+    margin:auto
+}
+
+/* Bullets */
+section.bullets {
+    display: flex;
+}
+
+section.bullets .bullet {
+    width: 100%;
+    background-color: #F7DA8B;
+    color: #4F1C11;
+    padding: 2em;
+}
+
+section.bullets .bullet span.material-symbols-outlined {
+    font-size: 48px;
+
+    border: 2px solid #4F1C11;
+    border-radius: 10px;
+    margin-bottom: 0.25em;
+}
+
+section.bullets .bullet h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+section.bullets .bullet h2 {
+    font-size: 0.75em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+@media  screen and (max-width: 768px) {
+    section.bullets {
+        flex-direction: column;
+    }
+}
+
+/* Text + Image in box */
+
+section.text-image-box {
+    position: relative;
+    background-color: #f5f5f5;
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+    color: #4F1C11;
+}
+
+section.text-image-box > .text h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+section.text-image-box > .text p {
+    font-size: 1em;
+}
+
+section.text-image-box > .image {
+    background-color: #4F1C11;
+    margin-left: 4em;
+    color: #f5f5f5;
+    display: flex;
+}
+
+section.text-image-box > .image img {
+    display: block;
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    object-position: 0% 0%;
+    position: relative;
+    top: -1em;
+    left: -1em;
+}
+
+section.text-image-box .image .text {
+    margin: 1em;
+}
+
+@media  screen and (max-width: 768px) {
+    section.text-image-box > .image {
+        flex-direction: column;
+    }
+}
