@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --white: #e5e5e5;
+    --bg: #909090;
+    --text: #303030;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -7,13 +13,37 @@
 
 body {
     font-family: 'Roboto';
-    background-color: grey;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    padding: 3em;
+    background-color: var(--white);
+    color: var(--text);
+    border-radius: 5px;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0.25em 0.25em 0.75em rgb(24, 24, 24);
+}
+
+body > div > h1 {
+    margin-bottom: 0.5em;
 }
 
 ul {
     list-style: none;
+    text-align: left;
 }
 
 ul li a {
     text-decoration: none;
+    color: var(--text);
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }
