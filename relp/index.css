@@ -252,3 +252,26 @@ section.text-image-box .image .text {
         flex-direction: column;
     }
 }
+
+/* Text */
+
+section.text {
+    background-color: #f5f5f5;
+    padding: 2em;
+    color: #4F1C11;
+}
+
+section.text h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+section.text p {
+    margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+    section.text {
+        text-align: center;
+    }
+}
