@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: var(--color-primary);
+    z-index: 1;
+
+    font-family: 'Lato', 'Roboto', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.0125em;
+
+    color: white;
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+        margin-inline: auto;
+    }
+
+    mat-icon {
+        color: white;
+    }
+
+    div.menu ul {
+
+        list-style: none;
+        padding: 0px;
+        position: relative;
+
+        li {
+
+            margin-bottom: 0.5em;
+            transform: rotateZ(180deg);
+
+            a {
+            
+                color: white;
+                text-decoration: none;
+                writing-mode: vertical-lr;
+            }
+
+        }
+        
+    }
+
+    div.marker {
+        position: absolute;
+        right: -22px;
+        top: 0px;
+        transition: 0.5s;
+        transform: translate(0px, calc(-100vh));
+
+        img {
+            width: 20px;
+            height: auto;
+            filter: drop-shadow(-2px 6px 8px hsla(0, 0%, 0%, 0.5));
+            -webkit-filter: drop-shadow(-2px 6px 8px hsla(0, 0%, 0%, 0.5));
+        }
+    }
+}
+
+
+/* Marker Movement */
+
+ul > li:nth-child(1).active ~ div.marker {
+    transform: translate(0px, calc(2em));
+}
