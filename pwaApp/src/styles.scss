@@ -1,6 +1,8 @@
 /* Material Custom Theme */
 @import "~@angular/material/theming";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import url('https://fonts.googleapis.com/css2?family=Sora&family=Lato&family=Sora:wght@700&display=swap');
+
 
 // Plus imports for other components in your app.
 
@@ -43,5 +45,5 @@ body {
   margin: 0px;
   padding: 0px;
 
-  font-family: 'Lato', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Sora', 'Lato', 'Helvetica Neue', sans-serif;
 }
