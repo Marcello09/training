@@ -26,10 +26,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Install dependencies PWA App
+      working-directory: ./pwaApp
+      run: npm i
     - name: Build PWA App
-    - working-directory: ./pwaApp
-    - run: npm run build
-    - run: npm test
+      working-directory: ./pwaApp
+      run: npm run build
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
