@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { GreenComponent } from './home/green/green.component';
 import { MainComponent } from './home/main/main.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MainComponent } from './home/main/main.component';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    MatIconModule,
     SharedModule
   ],
   providers: [],

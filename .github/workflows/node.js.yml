@@ -24,12 +24,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: '**/package-lock.json' # THIS PATTERN did the trick for me.
-    - name: Install dependencies PWA App
-      working-directory: ./pwaApp
-      run: npm i
     - name: Build PWA App
       working-directory: ./pwaApp
-      run: npm run build
+      run: |
+        npm i
+        npm run build
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:

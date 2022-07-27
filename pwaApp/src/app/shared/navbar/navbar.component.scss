@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
 nav {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
     position: fixed;
     top: 0px;
     left: 0px;
     bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0rem;
+    
     background-color: var(--color-primary);
     z-index: 1;
 
@@ -18,13 +22,21 @@ nav {
 
     color: white;
 
-    .logo img {
-        width: 32px;
-        height: 32px;
+    div.logo { 
+        margin-block: 1em;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     mat-icon {
         color: white;
+    }
+
+    div.home {
+        margin-block: 1em;
     }
 
     div.menu ul {
@@ -52,7 +64,7 @@ nav {
 
     div.marker {
         position: absolute;
-        right: -1px;
+        right: -0.5px;
         top: 0px;
         transition: 0.5s;
         transform: translate(0px, calc(-100vh));
@@ -61,7 +73,7 @@ nav {
             width: 20px;
             height: auto;
             filter: drop-shadow(-2px 6px 8px hsla(0, 0%, 0%, 0.5));
-            -webkit-filter: drop-shadow(-2px 6px 8px hsla(0, 0%, 0%, 0.5));
+            -webkit-filter: drop-shadow(-2px 2px 15px hsla(0, 0%, 0%, 0.5));
             clip-path: polygon(-100% -100%, 100% -100%, 100% 200%, -100% 200%);
         }
     }
